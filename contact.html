@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — EXOTICS CA</title>
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header scrolled">
+    <a href="index.html" class="header__logo"><img src="assets/images/logo.png" alt="EXOTICS CA"></a>
+    <div class="header__actions">
+      <a href="https://www.instagram.com/exotics_eca/" target="_blank" rel="noopener" class="header__follow">Follow</a>
+      <a href="#" class="header__cart" aria-label="Cart"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M6 6h15l-1.5 9H8L6 6z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L5 3H2"/></svg><span class="header__cart-count">0</span></a>
+      <button class="header__menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="nav-overlay">
+    <div class="nav-overlay__top">
+      <a href="index.html" class="nav-overlay__logo"><img src="assets/images/logo.png" alt="EXOTICS CA"></a>
+      <button class="nav-overlay__close">&times;</button>
+    </div>
+    <div class="nav-overlay__links">
+      <a href="index.html" class="nav-overlay__link"><span class="nav-overlay__num">01</span><span class="nav-overlay__text">Home</span></a>
+      <a href="#" class="nav-overlay__link has-sub"><span class="nav-overlay__num">02</span><span class="nav-overlay__text">Shop</span></a>
+      <div class="nav-overlay__sub"><a href="flower.html">Flower</a><a href="flower.html#limited">Pre Roll</a><a href="flower.html#limited">Limited Drops</a><a href="more-products.html">Other</a></div>
+      <a href="merch.html" class="nav-overlay__link"><span class="nav-overlay__num">03</span><span class="nav-overlay__text">Merch</span></a>
+      <a href="store-locator.html" class="nav-overlay__link"><span class="nav-overlay__num">04</span><span class="nav-overlay__text">Store Locator</span></a>
+      <a href="about-us.html" class="nav-overlay__link"><span class="nav-overlay__num">05</span><span class="nav-overlay__text">About Us</span></a>
+      <a href="gallery.html" class="nav-overlay__link"><span class="nav-overlay__num">06</span><span class="nav-overlay__text">Gallery</span></a>
+      <a href="contact.html" class="nav-overlay__link"><span class="nav-overlay__num">07</span><span class="nav-overlay__text">Contact</span></a>
+    </div>
+    <p class="nav-overlay__social">Follow us on Instagram <a href="https://www.instagram.com/exotics_eca/" target="_blank" rel="noopener">@exotics_eca</a></p>
+  </nav>
+
+  <section class="page-hero">
+    <h1>Let's Get in Touch</h1>
+    <p>Vendor inquiries, collabs, and wholesale — Cash Rules Everything.</p>
+  </section>
+
+  <form class="contact-form fade-up" data-form>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Wholesale, Collab, General Inquiry...">
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Tell us about your exotic empire..."></textarea>
+    </div>
+    <button type="submit" class="btn btn--primary" style="width:100%">Send Message</button>
+    <p class="form-success" style="display:none;color:var(--green);margin-top:1rem;text-align:center">Thank you! Your submission has been received!</p>
+    <p class="form-error" style="display:none;color:var(--red);margin-top:1rem;text-align:center">Oops! Something went wrong while submitting the form.</p>
+  </form>
+
+  <section class="section section--navy" style="padding:3rem 2.5rem">
+    <div class="container" style="text-align:center">
+      <img src="assets/images/logo.png" alt="EXOTICS CA" style="width:100px;margin:0 auto 1.5rem;opacity:0.7">
+      <p style="color:var(--gray);margin-bottom:0.5rem">California, USA</p>
+      <p style="margin-bottom:0.5rem"><a href="tel:+18005551234" style="color:var(--blue-light)">(800) 555-1234</a></p>
+      <p style="margin-bottom:1.5rem"><a href="mailto:info@exoticsca.com" style="color:var(--blue-light)">info@exoticsca.com</a></p>
+      <div class="footer__social" style="justify-content:center">
+        <a href="https://www.instagram.com/exotics_eca/" target="_blank" rel="noopener">@exotics_eca</a>
+        <a href="https://www.instagram.com/eca_vendor/" target="_blank" rel="noopener">@eca_vendor</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <a href="about-us.html" class="footer__link"><span class="footer__link-num">01</span> About Us</a>
+        <a href="shop.html" class="footer__link"><span class="footer__link-num">02</span> Shop</a>
+        <a href="contact.html" class="footer__link"><span class="footer__link-num">03</span> Contact</a>
+        <a href="store-locator.html" class="footer__link"><span class="footer__link-num">04</span> Store Locator</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <div class="footer__contact-item"><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>California, USA</div>
+        <div class="footer__social"><a href="https://www.instagram.com/exotics_eca/" target="_blank" rel="noopener">@exotics_eca</a><a href="https://www.instagram.com/eca_vendor/" target="_blank" rel="noopener">@eca_vendor</a></div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Join the Inner Circle</h4>
+        <form class="footer__newsletter" data-form><input type="email" placeholder="Enter your email" required><button type="submit" class="btn btn--primary" style="width:100%">Subscribe</button><p class="form-success" style="display:none;color:var(--green);margin-top:0.75rem;font-size:0.85rem">Thank you!</p></form>
+      </div>
+    </div>
+    <div class="footer__bottom"><p>&copy; 2026 EXOTICS CA. <a href="#">Privacy Policy</a></p></div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

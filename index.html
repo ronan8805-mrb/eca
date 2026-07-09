@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXOTICS CA — Loyalty Over Royalty</title>
+  <meta name="description" content="EXOTICS CA — Monopoly on California exotics. Limited small-batch drops. Build Your Exotic Empire.">
+  <link rel="icon" href="assets/images/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Age Gate -->
+  <div class="age-gate" id="age-gate">
+    <div class="age-gate__inner">
+      <img src="assets/images/logo.png" alt="EXOTICS CA" class="age-gate__logo">
+      <h4>You must be 21 or older to access this website</h4>
+      <p>Are you over 21 years of age?</p>
+      <div class="age-gate__buttons">
+        <button class="age-gate__btn" id="age-yes">Yes</button>
+        <button class="age-gate__btn age-gate__btn--no" id="age-no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Email Modal -->
+  <div class="modal-overlay" id="email-modal">
+    <div class="modal">
+      <button class="modal__close">&times;</button>
+      <img src="assets/images/logo.png" alt="EXOTICS CA" class="modal__logo">
+      <h3>We are getting ready to launch here soon</h3>
+      <p>Pass Go &amp; Collect Your Drop</p>
+      <form data-form>
+        <input type="email" placeholder="Enter your email — Notify Me" required>
+        <input type="text" placeholder="Search your address">
+        <button type="submit" class="btn btn--primary" style="width:100%">Notify Me</button>
+        <p class="form-success" style="display:none;color:var(--green);margin-top:1rem">You've joined the empire! Stay tuned for our next drop.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="assets/images/logo.png" alt="EXOTICS CA">
+    </a>
+    <div class="header__actions">
+      <a href="https://www.instagram.com/exotics_eca/" target="_blank" rel="noopener" class="header__follow">Follow</a>
+      <a href="#" class="header__cart" aria-label="Cart">
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M6 6h15l-1.5 9H8L6 6z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L5 3H2"/></svg>
+        <span class="header__cart-count">0</span>
+      </a>
+      <button class="header__menu-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Nav Overlay -->
+  <nav class="nav-overlay">
+    <div class="nav-overlay__top">
+      <a href="index.html" class="nav-overlay__logo"><img src="assets/images/logo.png" alt="EXOTICS CA"></a>
+      <button class="nav-overlay__close">&times;</button>
+    </div>
+    <div class="nav-overlay__links">
+      <a href="index.html" class="nav-overlay__link"><span class="nav-overlay__num">01</span><span class="nav-overlay__text">Home</span></a>
+      <a href="#" class="nav-overlay__link has-sub"><span class="nav-overlay__num">02</span><span class="nav-overlay__text">Shop</span></a>
+      <div class="nav-overlay__sub">
+        <a href="flower.html">Flower</a>
+        <a href="flower.html#limited">Pre Roll</a>
+        <a href="flower.html#limited">Limited Drops</a>
+        <a href="more-products.html">Other</a>
+      </div>
+      <a href="merch.html" class="nav-overlay__link"><span class="nav-overlay__num">03</span><span class="nav-overlay__text">Merch</span></a>
+      <a href="store-locator.html" class="nav-overlay__link"><span class="nav-overlay__num">04</span><span class="nav-overlay__text">Store Locator</span></a>
+      <a href="about-us.html" class="nav-overlay__link"><span class="nav-overlay__num">05</span><span class="nav-overlay__text">About Us</span></a>
+      <a href="gallery.html" class="nav-overlay__link"><span class="nav-overlay__num">06</span><span class="nav-overlay__text">Gallery</span></a>
+      <a href="contact.html" class="nav-overlay__link"><span class="nav-overlay__num">07</span><span class="nav-overlay__text">Contact</span></a>
+    </div>
+    <p class="nav-overlay__social">Follow us on Instagram <a href="https://www.instagram.com/exotics_eca/" target="_blank" rel="noopener">@exotics_eca</a></p>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <span class="hero__cash">$</span>
+    <span class="hero__cash">$</span>
+    <span class="hero__cash">$</span>
+    <span class="hero__cash">$</span>
+    <span class="hero__cash">$</span>
+    <div class="hero__content fade-up">
+      <img src="assets/images/logo.png" alt="EXOTICS CA Mascot" class="hero__mascot">
+      <h1 class="hero__title">EXOTICS CA</h1>
+      <p class="hero__tagline">Loyalty Over Royalty — Pass Go &amp; Collect Premium Exotics</p>
+      <p class="hero__desc">Monopoly on California exotics. Limited small-batch drops. Build Your Exotic Empire.</p>
+      <div class="hero__cta">
+        <a href="shop.html" class="btn btn--primary">Shop Now</a>
+        <a href="flower.html#limited" class="btn btn--gold">Bank the Best Drops</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Banner -->
+  <section class="banner-slider">
+    <a href="flower.html" class="banner-slide">
+      <div class="banner-slide--hero">
+        <div class="banner-slide__content fade-up">
+          <img src="assets/images/logo.png" alt="" style="width:80px;margin:0 auto 1.5rem;opacity:0.7">
+          <h2>Unlock Boardwalk Level Luxury</h2>
+          <span class="btn btn--outline">Explore Our Strains</span>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- Discover Products -->
+  <section class="section section--dark">
+    <div class="container">
+      <h2 class="section__label fade-up">Discover Our Products</h2>
+      <div class="products-grid">
+        <a href="flower.html" class="product-card fade-up">
+          <div class="product-card__image">
+            <span class="product-card__badge">Top Hat Tier</span>
+            <img src="assets/images/product-jar-1.jpg" alt="EXOTICS CA Flower">
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__title">Flower</span>
+            <span class="product-card__view">View &rarr;</span>
+          </div>
+        </a>
+        <a href="flower.html#limited" class="product-card fade-up">
+          <div class="product-card__image">
+            <span class="product-card__badge">Corner the Market</span>
+            <img src="assets/images/product-coming-soon.jpg" alt="EXOTICS CA Limited Drops">
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__title">Limited Drops</span>
+            <span class="product-card__view">View &rarr;</span>
+          </div>
+        </a>
+        <a href="more-products.html" class="product-card fade-up">
+          <div class="product-card__image">
+            <span class="product-card__badge">Get Rich</span>
+            <img src="assets/images/product-jar-3.jpg" alt="EXOTICS CA Other Products">
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__title">Other</span>
+            <span class="product-card__view">View &rarr;</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- We Are EXOTICS CA -->
+  <section class="we-are">
+    <div class="we-are__text fade-up">
+      <h2>We Are</h2>
+      <h3>EXOTICS CA</h3>
+      <p>Welcome to EXOTICS CA — where California luxury meets exotic small-batch cannabis. Monopoly on the finest drops. Based in California, we craft premium, limited editions and hype collabs sought worldwide. Loyalty Over Royalty. Build Your Exotic Empire. Cash Rules Everything.</p>
+      <a href="about-us.html" class="btn btn--outline">Acquire the Story</a>
+    </div>
+    <div class="we-are__visual fade-up">
+      <span class="we-are__money" style="top:10%;left:5%">$</span>
+      <span class="we-are__money" style="bottom:15%;right:10%;animation-delay:2s">$</span>
+      <img src="assets/images/logo.png" alt="EXOTICS CA">
+    </div>
+  </section>
+
+  <!-- Country Availability -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="countries-grid fade-up">
+        <div class="country-card">
+          <div class="country-card__code">USA</div>
+          <div class="country-card__name">United States</div>
+          <div class="country-card__status">Available</div>
+        </div>
+        <div class="country-card">
+          <div class="country-card__code">UK</div>
+          <div class="country-card__name">United Kingdom</div>
+          <div class="country-card__status">Available</div>
+        </div>
+        <div class="country-card">
+          <div class="country-card__code">TH</div>
+          <div class="country-card__name">Thailand</div>
+          <div class="country-card__status">Available</div>
+        </div>
+        <div class="country-card">
+          <div class="country-card__code">DE</div>
+          <div class="country-card__name">Germany</div>
+          <div class="country-card__status">Available</div>
+        </div>
+        <div class="country-card">
+          <div class="country-card__code">ES</div>
+          <div class="country-card__name">Spain</div>
+          <div class="country-card__status">Available</div>
+        </div>
+      </div>
+      <div class="countries-scroll fade-up">
+        <div class="country-card"><div class="country-card__code">USA</div><div class="country-card__name">United States</div><div class="country-card__status">Available</div></div>
+        <div class="country-card"><div class="country-card__code">UK</div><div class="country-card__name">United Kingdom</div><div class="country-card__status">Available</div></div>
+        <div class="country-card"><div class="country-card__code">TH</div><div class="country-card__name">Thailand</div><div class="country-card__status">Available</div></div>
+        <div class="country-card"><div class="country-card__code">DE</div><div class="country-card__name">Germany</div><div class="country-card__status">Available</div></div>
+        <div class="country-card"><div class="country-card__code">ES</div><div class="country-card__name">Spain</div><div class="country-card__status">Available</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Portal -->
+  <section class="cta-portal">
+    <div class="cta-portal__glow"></div>
+    <img src="assets/images/logo.png" alt="" class="cta-portal__logo fade-up">
+    <h2 class="fade-up">Experience Boardwalk Level Luxury at its best.</h2>
+    <a href="https://weedmaps.com/search?q=exotics+ca" target="_blank" rel="noopener" class="btn btn--green fade-up">Find the Magic</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <a href="about-us.html" class="footer__link"><span class="footer__link-num">01</span> About Us</a>
+        <a href="shop.html" class="footer__link"><span class="footer__link-num">02</span> Shop</a>
+        <a href="contact.html" class="footer__link"><span class="footer__link-num">03</span> Contact</a>
+        <a href="store-locator.html" class="footer__link"><span class="footer__link-num">04</span> Store Locator</a>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          California, USA
+        </div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <a href="tel:+18005551234">(800) 555-1234</a>
+        </div>
+        <div class="footer__contact-item">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          <a href="mailto:info@exoticsca.com">info@exoticsca.com</a>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/exotics_eca/" target="_blank" rel="noopener">@exotics_eca</a>
+          <a href="https://www.instagram.com/eca_vendor/" target="_blank" rel="noopener">@eca_vendor</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Join the Inner Circle</h4>
+        <p style="color:var(--gray);font-size:0.85rem;margin-bottom:1rem">Be the first to know about our new drops and events.</p>
+        <form class="footer__newsletter" data-form>
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn--primary" style="width:100%">Subscribe</button>
+          <p class="form-success" style="display:none;color:var(--green);margin-top:0.75rem;font-size:0.85rem">Thank you! Your submission has been received!</p>
+          <p class="form-error" style="display:none;color:var(--red);margin-top:0.75rem;font-size:0.85rem">Oops! Something went wrong while submitting the form.</p>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2026 EXOTICS CA. All rights reserved. By subscribing you agree with our <a href="#">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
