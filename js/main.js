@@ -2,6 +2,14 @@
 (function () {
   'use strict';
 
+  // Hero video autoplay
+  const heroVideo = document.querySelector('.hero__video');
+  function playHeroVideo() {
+    if (!heroVideo) return;
+    heroVideo.muted = true;
+    heroVideo.play().catch(() => {});
+  }
+
   // Age Gate
   const ageGate = document.getElementById('age-gate');
   const ageYes = document.getElementById('age-yes');
@@ -11,6 +19,7 @@
     const verified = sessionStorage.getItem('exotics_age_verified');
     if (verified === 'true') {
       ageGate.classList.add('hidden');
+      playHeroVideo();
     }
 
     if (ageYes) {
@@ -18,6 +27,7 @@
         sessionStorage.setItem('exotics_age_verified', 'true');
         ageGate.classList.add('hidden');
         document.body.style.overflow = '';
+        playHeroVideo();
       });
     }
 
