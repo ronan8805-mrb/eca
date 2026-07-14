@@ -1778,9 +1778,14 @@ ul { list-style: none; }
 }
 
 .title-deed__rolex {
-  width: 70%;
-  max-width: 200px;
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.35));
+  width: 78%;
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 2px;
+  mix-blend-mode: multiply;
+  filter: sepia(0.12) contrast(1.05) brightness(1.02);
+  opacity: 0.95;
 }
 
 .title-deed__mascot {
