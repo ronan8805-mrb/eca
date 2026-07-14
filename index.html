@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXOTICS CA — Loyalty Over Royalty</title>
-  <meta name="description" content="EXOTICS CA — Monopoly on California exotics. Limited small-batch drops. Build Your Exotic Empire.">
+  <meta name="description" content="EXOTICS CA — Join the Inner Circle. Loyalty Over Royalty. Pre-launch exclusive drops, seeds, merch &amp; more.">
   <link rel="icon" href="assets/images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,19 +23,79 @@
     </div>
   </div>
 
-  <!-- Email Modal -->
-  <div class="modal-overlay" id="email-modal">
-    <div class="modal">
-      <button class="modal__close">&times;</button>
-      <img src="assets/images/logo.png" alt="EXOTICS CA" class="modal__logo">
-      <h3>We are getting ready to launch here soon</h3>
-      <p>Pass Go &amp; Collect Your Drop</p>
-      <form data-form>
-        <input type="email" placeholder="Enter your email — Notify Me" required>
-        <input type="text" placeholder="Search your address">
-        <button type="submit" class="btn btn--primary" style="width:100%">Notify Me</button>
-        <p class="form-success" style="display:none;color:var(--green);margin-top:1rem">You've joined the empire! Stay tuned for our next drop.</p>
+  <!-- Sign-Up Gate -->
+  <div class="signup-gate hidden" id="signup-gate">
+    <div class="signup-gate__bg"></div>
+    <span class="signup-gate__cash" style="top:12%;left:8%">$</span>
+    <span class="signup-gate__cash" style="top:20%;right:10%;animation-delay:1.5s">$</span>
+    <span class="signup-gate__cash" style="bottom:25%;left:12%;animation-delay:3s">$</span>
+    <span class="signup-gate__cash" style="bottom:15%;right:15%;animation-delay:2s">$</span>
+    <div class="signup-gate__inner">
+      <img src="assets/images/logo.png" alt="EXOTICS CA" class="signup-gate__logo">
+      <h2 class="signup-gate__headline">Loyalty Over Royalty — Join the Inner Circle</h2>
+      <p class="signup-gate__sub">Private drops. Private vendor reveals. Private pop-up shops. Exclusive ECA seeds (Blue Z &amp; more with sick packaging). Free tickets. Meet &amp; greets. Limited merch drops.</p>
+      <form class="signup-form" id="signup-form">
+        <input type="text" id="signup-name" name="name" placeholder="Full Name" required autocomplete="name">
+        <input type="email" id="signup-email" name="email" placeholder="Email Address" required autocomplete="email">
+        <input type="tel" id="signup-phone" name="phone" placeholder="Phone Number" required autocomplete="tel">
+        <button type="submit" class="btn btn--glow">Get on the List</button>
       </form>
+    </div>
+  </div>
+
+  <!-- Title Deed Card -->
+  <div class="title-deed" id="title-deed" aria-hidden="true">
+    <div class="title-deed__card">
+      <span class="title-deed__corner title-deed__corner--tl"></span>
+      <span class="title-deed__corner title-deed__corner--tr"></span>
+      <span class="title-deed__corner title-deed__corner--bl"></span>
+      <span class="title-deed__corner title-deed__corner--br"></span>
+      <div class="title-deed__header">
+        <h2>Title Deed</h2>
+        <p>Exotics California — Boardwalk Tier</p>
+      </div>
+      <h3 class="title-deed__name" id="title-deed-name">YOUR NAME</h3>
+      <div class="title-deed__body">
+        <span class="title-deed__money">$</span>
+        <span class="title-deed__money">$</span>
+        <svg class="title-deed__rolex" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg" aria-label="Gold Rolex watch">
+          <ellipse cx="100" cy="60" rx="75" ry="42" fill="none" stroke="#8B7355" stroke-width="6"/>
+          <ellipse cx="100" cy="60" rx="68" ry="36" fill="url(#goldGrad)" stroke="#5a4a2a" stroke-width="2"/>
+          <rect x="30" y="52" width="18" height="16" rx="3" fill="url(#goldGrad)" stroke="#5a4a2a" stroke-width="1.5"/>
+          <rect x="152" y="52" width="18" height="16" rx="3" fill="url(#goldGrad)" stroke="#5a4a2a" stroke-width="1.5"/>
+          <circle cx="100" cy="60" r="28" fill="#f0e6c8" stroke="#8B7355" stroke-width="2"/>
+          <circle cx="100" cy="60" r="24" fill="#fffef5" stroke="#c9a84c" stroke-width="1"/>
+          <line x1="100" y1="60" x2="100" y2="42" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+          <line x1="100" y1="60" x2="115" y2="68" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="100" cy="60" r="3" fill="#1a1a1a"/>
+          <text x="100" y="95" text-anchor="middle" font-size="8" fill="#5a4a2a" font-family="serif" font-weight="bold">ROLEX</text>
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#f5e6a8"/>
+              <stop offset="50%" style="stop-color:#d4af37"/>
+              <stop offset="100%" style="stop-color:#b8962e"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <img src="assets/images/logo.png" alt="" class="title-deed__mascot">
+      </div>
+      <div class="title-deed__footer">
+        <p>Title Deed Acquired — You're In the Empire</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Teaser Finale -->
+  <div class="teaser-finale" id="teaser-finale" aria-hidden="true">
+    <span class="teaser-finale__cash">$</span>
+    <span class="teaser-finale__cash">$</span>
+    <span class="teaser-finale__cash">$</span>
+    <span class="teaser-finale__cash">$</span>
+    <span class="teaser-finale__cash">$</span>
+    <span class="teaser-finale__cash">$</span>
+    <div class="teaser-finale__text">
+      <h2>See You Soon.</h2>
+      <p>You're one of the first on the list.<br>We'll be in touch.</p>
     </div>
   </div>
 
@@ -50,9 +110,14 @@
         <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M6 6h15l-1.5 9H8L6 6z"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M6 6L5 3H2"/></svg>
         <span class="header__cart-count">0</span>
       </a>
-      <button class="header__menu-btn" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header__menu-wrap">
+        <button class="header__menu-btn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="header__menu-lock" aria-hidden="true">
+          <svg viewBox="0 0 24 24" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -87,7 +152,6 @@
         class="hero__video"
         autoplay
         muted
-        loop
         playsinline
         preload="auto"
         poster="assets/images/logo.png"
@@ -108,11 +172,13 @@
       <p class="hero__tagline">Loyalty Over Royalty — Pass Go &amp; Collect Premium Exotics</p>
       <p class="hero__desc">Monopoly on California exotics. Limited small-batch drops. Build Your Exotic Empire.</p>
       <div class="hero__cta">
-        <a href="shop.html" class="btn btn--primary">Shop Now</a>
-        <a href="flower.html#limited" class="btn btn--gold">Bank the Best Drops</a>
+        <a href="shop.html" class="btn btn--primary btn-lock teaser-locked">Shop Now</a>
+        <a href="flower.html#limited" class="btn btn--gold btn-lock teaser-locked">Bank the Best Drops</a>
       </div>
     </div>
   </section>
+
+  <div id="main-content">
 
   <!-- Promo Banner -->
   <section class="banner-slider">
@@ -274,6 +340,9 @@
     </div>
   </footer>
 
+  </div><!-- /main-content -->
+
   <script src="js/main.js"></script>
+  <script src="js/teaser.js"></script>
 </body>
 </html>

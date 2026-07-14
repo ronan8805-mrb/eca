@@ -2,20 +2,22 @@
 (function () {
   'use strict';
 
-  // Hero video autoplay
+  const isTeaserSite = !!document.getElementById('signup-gate');
+
+  // Hero video autoplay (non-teaser pages only)
   const heroVideo = document.querySelector('.hero__video');
   function playHeroVideo() {
-    if (!heroVideo) return;
+    if (!heroVideo || isTeaserSite) return;
     heroVideo.muted = true;
     heroVideo.play().catch(() => {});
   }
 
-  // Age Gate
+  // Age Gate (non-teaser pages — teaser.js handles index)
   const ageGate = document.getElementById('age-gate');
   const ageYes = document.getElementById('age-yes');
   const ageNo = document.getElementById('age-no');
 
-  if (ageGate) {
+  if (ageGate && !isTeaserSite) {
     const verified = sessionStorage.getItem('exotics_age_verified');
     if (verified === 'true') {
       ageGate.classList.add('hidden');
@@ -100,8 +102,8 @@
     });
   });
 
-  // Auto-show email modal after age gate (first visit)
-  if (!sessionStorage.getItem('exotics_email_shown') && ageGate) {
+  // Auto-show email modal after age gate (first visit, non-teaser only)
+  if (!isTeaserSite && !sessionStorage.getItem('exotics_email_shown') && ageGate) {
     const observer = new MutationObserver(() => {
       if (ageGate.classList.contains('hidden') && !sessionStorage.getItem('exotics_email_shown')) {
         setTimeout(() => {
