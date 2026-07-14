@@ -154,9 +154,9 @@
     signupForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const name = document.getElementById('signup-name')?.value.trim();
-      const email = document.getElementById('signup-email')?.value.trim();
+      const instagram = document.getElementById('signup-instagram')?.value.trim();
       const phone = document.getElementById('signup-phone')?.value.trim();
-      if (!name || !email || !phone) return;
+      if (!name || !instagram || !phone) return;
 
       const btn = signupForm.querySelector('button[type="submit"]');
       if (btn) {
