@@ -1700,8 +1700,8 @@ ul { list-style: none; }
 
 .title-deed__card {
   position: relative;
-  width: min(420px, 92vw);
-  aspect-ratio: 3 / 4;
+  width: min(380px, 90vw);
+  max-height: min(88vh, 520px);
   background: linear-gradient(165deg, #f5e6c8 0%, #e8d4a8 35%, #dcc898 70%, #f0e0b8 100%);
   border: 6px solid #1a1a1a;
   border-radius: 4px;
@@ -1710,9 +1710,10 @@ ul { list-style: none; }
     inset 0 0 0 6px #1a1a1a,
     0 20px 80px rgba(0, 0, 0, 0.6),
     0 0 60px rgba(212, 175, 55, 0.3);
-  padding: 1.75rem 1.5rem;
-  display: flex;
-  flex-direction: column;
+  padding: 1.15rem 1.2rem 1rem;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  gap: 0.35rem;
   transform: scale(0.3) rotateY(-20deg);
   opacity: 0;
   transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s;
@@ -1734,8 +1735,7 @@ ul { list-style: none; }
 .title-deed__header {
   text-align: center;
   border-bottom: 3px double #1a1a1a;
-  padding-bottom: 0.75rem;
-  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
 }
 
 .title-deed__header h2 {
@@ -1757,42 +1757,44 @@ ul { list-style: none; }
 
 .title-deed__name {
   font-family: var(--font-head);
-  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-size: clamp(1.1rem, 4.5vw, 1.65rem);
   font-weight: 800;
   text-align: center;
   color: #1a1a1a;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  line-height: 1.15;
-  margin: 0.5rem 0;
+  line-height: 1.1;
+  margin: 0;
+  padding: 0 0.25rem;
   text-shadow: 1px 1px 0 rgba(255,255,255,0.5);
+  word-break: break-word;
 }
 
 .title-deed__body {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 0.5rem 0;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0.15rem 0;
 }
 
 .title-deed__rolex {
-  width: 78%;
-  max-width: 220px;
+  width: auto;
+  max-width: 72%;
+  max-height: 100%;
   height: auto;
   object-fit: contain;
   border-radius: 2px;
-  mix-blend-mode: multiply;
-  filter: sepia(0.12) contrast(1.05) brightness(1.02);
-  opacity: 0.95;
+  filter: brightness(1.35) contrast(1.1) saturate(1.15);
 }
 
 .title-deed__mascot {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 70px;
+  width: 56px;
   opacity: 0.85;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
@@ -1818,17 +1820,26 @@ ul { list-style: none; }
 .title-deed__footer {
   text-align: center;
   border-top: 3px double #1a1a1a;
-  padding-top: 0.85rem;
+  padding-top: 0.55rem;
+  flex-shrink: 0;
 }
 
 .title-deed__footer p {
   font-family: var(--font-head);
-  font-size: clamp(0.7rem, 2.8vw, 0.95rem);
+  font-size: clamp(0.62rem, 2.4vw, 0.78rem);
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07em;
   color: #1a1a1a;
   text-transform: uppercase;
-  line-height: 1.45;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.title-deed__footer-sub {
+  font-size: clamp(0.58rem, 2.2vw, 0.72rem) !important;
+  letter-spacing: 0.1em !important;
+  margin-top: 0.2rem !important;
+  color: #333 !important;
 }
 
 .title-deed__corner {
