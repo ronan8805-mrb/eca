@@ -1838,6 +1838,38 @@ ul { list-style: none; }
 .title-deed__corner--bl { bottom: 10px; left: 10px; border-right: none; border-top: none; }
 .title-deed__corner--br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
 
+.title-deed__skip {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 0.75rem 2rem;
+  font-family: var(--font-head);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: rgba(5, 5, 8, 0.6);
+  border: 1px solid var(--gold);
+  border-radius: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s, background 0.3s;
+  cursor: pointer;
+}
+
+.title-deed__skip.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.title-deed__skip:hover {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: var(--gold);
+}
+
 /* ── Teaser Locked Mode ── */
 body.teaser-mode {
   overflow: hidden !important;

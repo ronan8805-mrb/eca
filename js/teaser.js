@@ -57,19 +57,42 @@
     document.body.classList.remove('signup-active');
   }
 
+  function dismissTitleDeed(resolve) {
+    const skipBtn = document.getElementById('title-deed-skip');
+    skipBtn?.classList.remove('visible');
+    titleDeed.classList.remove('visible');
+    titleDeed.classList.add('exit');
+    setTimeout(() => {
+      titleDeed.classList.remove('exit');
+      resolve();
+    }, 600);
+  }
+
   function showTitleDeed(name) {
+    const skipBtn = document.getElementById('title-deed-skip');
     if (titleDeedName) titleDeedName.textContent = name.toUpperCase();
+    skipBtn?.classList.remove('visible');
     titleDeed.classList.add('visible');
     playKaChing();
+
     return new Promise(resolve => {
-      setTimeout(() => {
-        titleDeed.classList.remove('visible');
-        titleDeed.classList.add('exit');
-        setTimeout(() => {
-          titleDeed.classList.remove('exit');
-          resolve();
-        }, 600);
+      let dismissed = false;
+      const finish = () => {
+        if (dismissed) return;
+        dismissed = true;
+        clearTimeout(autoTimer);
+        clearTimeout(skipTimer);
+        skipBtn?.removeEventListener('click', onSkip);
+        dismissTitleDeed(resolve);
+      };
+      const onSkip = () => finish();
+
+      const skipTimer = setTimeout(() => {
+        skipBtn?.classList.add('visible');
+        skipBtn?.addEventListener('click', onSkip);
       }, 3000);
+
+      const autoTimer = setTimeout(finish, 10000);
     });
   }
 
